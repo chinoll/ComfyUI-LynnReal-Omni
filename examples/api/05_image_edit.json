@@ -1,0 +1,101 @@
+{
+  "1": {
+    "class_type": "LynnRealModelLoader",
+    "inputs": {
+      "bundle": "standard"
+    }
+  },
+  "2": {
+    "class_type": "LynnRealTextEncoderLoader",
+    "inputs": {
+      "bundle": "standard"
+    }
+  },
+  "3": {
+    "class_type": "LynnRealVAELoader",
+    "inputs": {
+      "bundle": "standard"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "upload_your_image.png"
+    }
+  },
+  "5": {
+    "class_type": "LynnRealImageEdit",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ],
+      "prompt": "Change the jacket to red. Preserve identity and the background.",
+      "width": 768,
+      "height": 448
+    }
+  },
+  "6": {
+    "class_type": "LynnRealSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "5",
+        0
+      ],
+      "latent": [
+        "5",
+        1
+      ],
+      "seed": 7
+    }
+  },
+  "7": {
+    "class_type": "LynnRealDecode",
+    "inputs": {
+      "vae": [
+        "3",
+        0
+      ],
+      "latent": [
+        "6",
+        0
+      ],
+      "audio_vae": [
+        "3",
+        1
+      ]
+    }
+  },
+  "8": {
+    "class_type": "LynnRealSelectEditedImage",
+    "inputs": {
+      "images": [
+        "7",
+        0
+      ],
+      "frame_index": 11
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ],
+      "filename_prefix": "LynnReal/edit"
+    }
+  }
+}

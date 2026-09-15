@@ -1,0 +1,21 @@
+MiniMax H3 is licensed under the MiniMax H3 Community License Agreement,
+Copyright © 2026 MiniMax. All Rights Reserved.
+
+This is a ComfyUI adaptation of LynnReal-AI/LynnReal-Omni, reviewed at
+f6ee8b8ecfeafa354a56d91b27a530ac8897d8d8.
+
+flash.py adapts the upstream token selection and restoration implementation to
+ComfyUI ModelPatcher block replacements. quantization.py adapts the released
+W8A8 arithmetic to ComfyUI-managed weight operations. The other runtime files
+implement ComfyUI node interfaces, local checkpoint conversion, conditioning,
+native sampling, continuation, and codec integration. These are modified/new
+integration files, not verbatim copies of the upstream inference pipeline.
+
+tests/upstream_conversion.py contains excerpts of the Apache-2.0 licensed
+Hugging Face Diffusers converter, Copyright 2025 The MiniMax authors and
+The HuggingFace Team. Source revision:
+abc5e9bf71fd38f53cd471bc3acaa84bc5ecbfdc
+The Apache-2.0 license is included in LICENSES/Apache-2.0.txt.
+
+ComfyUI is an independently installed dependency and is not redistributed here.
+Model weights are not included. Their original licenses continue to apply.

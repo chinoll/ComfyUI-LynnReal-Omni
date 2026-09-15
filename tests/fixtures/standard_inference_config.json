@@ -1,0 +1,6 @@
+{
+  "format_version": 1,
+  "variant": "standard",
+  "steps": 4,
+  "conditioning_abi": "unified_ref_native"
+}

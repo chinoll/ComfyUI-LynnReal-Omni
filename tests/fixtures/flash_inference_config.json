@@ -1,0 +1,17 @@
+{
+  "format_version": 1,
+  "variant": "flash",
+  "steps": 3,
+  "conditioning_abi": "native_fl2va",
+  "num_layers": 42,
+  "quantization": "int8",
+  "token_compression": {
+    "full_prefix_blocks": 2,
+    "full_suffix_blocks": 14,
+    "spatial_stride": 2,
+    "reduction": "select",
+    "residual_gain": 1.0,
+    "preserve_text_tokens": true,
+    "preserve_audio_tokens": true
+  }
+}

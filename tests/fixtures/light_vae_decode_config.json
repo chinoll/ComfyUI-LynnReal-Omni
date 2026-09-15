@@ -1,0 +1,13 @@
+{
+  "student_tile_size": 272,
+  "student_long_axis_tile": 208,
+  "student_tile_overlap": 64,
+  "student_short_axis_overlap": 0,
+  "student_long_axis_overlap": 16,
+  "image_tile_size": 256,
+  "image_long_axis_tile": 256,
+  "image_context_tokens": 5,
+  "image_context_output_phase": 3,
+  "temporal_decode_protocol": "released-segment-prepadding-v3",
+  "tile_layout": "native"
+}

@@ -1,0 +1,2 @@
+# Runtime dependencies are provided by the supported ComfyUI installation.
+# No separate inference environment or additional inference package is needed.

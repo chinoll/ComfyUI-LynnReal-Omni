@@ -1,0 +1,65 @@
+{
+  "1": {
+    "class_type": "LynnRealModelLoader",
+    "inputs": {
+      "bundle": "standard"
+    }
+  },
+  "2": {
+    "class_type": "LynnRealTextEncoderLoader",
+    "inputs": {
+      "bundle": "standard"
+    }
+  },
+  "3": {
+    "class_type": "LynnRealVAELoader",
+    "inputs": {
+      "bundle": "standard"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "upload_your_image.png"
+    }
+  },
+  "5": {
+    "class_type": "LynnRealStream",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "first_image": [
+        "4",
+        0
+      ],
+      "initial_prompt": "The paper boat floats downstream.",
+      "captions_json": "[\"The paper boat continues floating downstream.\", \"The paper boat continues floating downstream.\", \"The paper boat continues floating downstream.\", \"The paper boat continues floating downstream.\", \"The paper boat continues floating downstream.\", \"The paper boat continues floating downstream.\"]",
+      "width": 768,
+      "height": 448,
+      "frames": 124,
+      "seed": 7
+    }
+  },
+  "6": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "5",
+        2
+      ],
+      "filename_prefix": "video/LynnReal",
+      "format": "auto",
+      "format.codec": "auto"
+    }
+  }
+}
